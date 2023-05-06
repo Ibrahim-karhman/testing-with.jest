@@ -14,5 +14,8 @@
     "url": "(https://github.com/Ibrahim-karhman/testing-with.jest)"
   },
   "author": "ibrahim karhman",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  }
 }
