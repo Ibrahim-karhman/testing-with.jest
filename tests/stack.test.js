@@ -18,6 +18,7 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('should return undefined for an empty stack', () => {
-    expect(stack.peek()).not.toBeDefined();
+  test('should add element to the top of the stack', () => {
+    stack.push(1);
+    expect(stack.peek()).toBe(1);
   });

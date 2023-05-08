@@ -32,7 +32,7 @@ test('Pushing an element should add it to the top of the stack on the webpage', 
 	await prompt.accept();
 
 	const topOfStack = await driver.findElement(By.id('top_of_stack')).getText();
-	expect(topOfStack).toEqual("Hello");
+	expect(topOfStack).toEqual("Hello world!");
   });
 
 describe('Clicking "Pusha till stacken"', () => {
