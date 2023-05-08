@@ -23,6 +23,18 @@ test('The stack should be empty in the beginning', async () => {
 	expect(stack).toEqual("n/a");
 });
 
+// min test
+test('Pushing an element should add it to the top of the stack on the webpage', async () => {
+	const pushButton = await driver.findElement(By.id('push'));
+	await pushButton.click();
+	const prompt = await driver.switchTo().alert();
+	await prompt.sendKeys("Hello world!");
+	await prompt.accept();
+
+	const topOfStack = await driver.findElement(By.id('top_of_stack')).getText();
+	expect(topOfStack).toEqual("Hello");
+  });
+
 describe('Clicking "Pusha till stacken"', () => {
 	it('should open a prompt box', async () => {
 		let push = await driver.findElement(By.id('push'));
@@ -32,3 +44,6 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.accept();
 	});
 });
+
+
+
